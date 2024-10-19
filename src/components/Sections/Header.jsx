@@ -1,25 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-// Components
-// import FullButton from "../Buttons/FullButton";
-// Assets
+import client from "../../contentful";
 import HeaderImage from "../../assets/img/header-img.png";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
 export default function Header() {
+  const [welcomeText, setWelcomeText] = useState("");
+  useEffect(() => {
+    client
+      .getEntries({
+        content_type: "asdanLogo",
+      })
+      .then((res) => {
+        if (res.items.length > 0) {
+          const welcome = res.items[0].fields.welcomeMessage; 
+          setWelcomeText(welcome);
+        }
+      })
+      .catch((error) => console.error("Error fetching entries:", error));
+  }, []);
+  
+  
+
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
           <h1 className="extraBold font60">We are Travel and Logistics Company</h1>
           <HeaderP className="font13 semiBold">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            {welcomeText}
           </HeaderP>
-          {/* <BtnWrapper>
-            <FullButton title="Get Started" />
-          </BtnWrapper> */}
         </div>
       </LeftSide>
       <RightSide>
@@ -31,9 +42,9 @@ export default function Header() {
             </QuotesWrapper>
             <div>
               <p className="font15 whiteColor">
-                <em>Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it.</em>
+                <em>Your Path to Adventure, Our Way to Deliver.</em>
               </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p>
+              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Daniel Asante</p>
             </div>
           </QuoteWrapper>
           <DotsWrapper>

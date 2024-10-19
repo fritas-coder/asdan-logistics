@@ -5,6 +5,8 @@ import RollerIcon from "../../assets/svg/Services/RollerIcon";
 import MonitorIcon from "../../assets/svg/Services/MonitorIcon";
 import BrowserIcon from "../../assets/svg/Services/BrowserIcon";
 import PrinterIcon from "../../assets/svg/Services/PrinterIcon";
+import PlaneIcon from "../../assets/svg/Services/PlaneIcon";
+import LogisticIcon from "../../assets/svg/Services/LogisticIcon"
 
 export default function ServiceBox({icon, title, subtitle}) {
   let getIcon;
@@ -24,6 +26,12 @@ export default function ServiceBox({icon, title, subtitle}) {
       break;
     default:
       getIcon = <RollerIcon />;
+      break;
+    case "plane":
+      getIcon = <PlaneIcon />;
+      break;
+    case "logistic":
+      getIcon = <LogisticIcon />;
       break;
   }
 
