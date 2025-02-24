@@ -16,39 +16,39 @@ export default function Services() {
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Our Awesome Services</h1>
-            <p className="font13">
+            {/* <p className="font13">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut
               <br />
               labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p>
+            </p> */}
           </HeaderInfo>
           <ServiceBoxRow className="flex">
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="roller"
-                title="Graphic Design"
+                icon="logistic"
+                title=" Travel And Tour"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="monitor"
-                title="Web Design"
+                icon="plane"
+                title="Visa Appointments"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="browser"
-                title="Development"
+                icon="plane"
+                title="Travel Insurance"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
-                icon="printer"
-                title="Print"
+                icon="browser"
+                title="Hotel Reservation"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
               />
             </ServiceBoxWrapper>
@@ -56,29 +56,29 @@ export default function Services() {
           <ServiceBoxRow className="flex">
             <ServiceBoxWrapper1>
               <ServiceBox
-                icon="plane"
-                title="Graphic Design"
+                icon="browser"
+                title=" Birth Certificate"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
               />
             </ServiceBoxWrapper1>
             <ServiceBoxWrapper1>
               <ServiceBox
-                icon="logistic"
-                title="Web Design"
+                icon="browser"
+                title="Visa Appeals"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
               />
             </ServiceBoxWrapper1>
             <ServiceBoxWrapper1>
               <ServiceBox
                 icon="browser"
-                title="Development"
+                title="Ticketing"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
               />
             </ServiceBoxWrapper1>
             <ServiceBoxWrapper1>
               <ServiceBox
-                icon="printer"
-                title="Print"
+                icon="browser"
+                title="Car Rentals"
                 subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
               />
             </ServiceBoxWrapper1>

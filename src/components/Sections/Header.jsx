@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import client from "../../contentful";
-import HeaderImage from "../../assets/img/header-img.png";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
-export default function Header() {
+ export default function Header() {
   const [welcomeText, setWelcomeText] = useState("");
+  const [headerImage, setHeaderImage] = useState("");
   useEffect(() => {
     client
       .getEntries({
@@ -14,28 +14,41 @@ export default function Header() {
       })
       .then((res) => {
         if (res.items.length > 0) {
-          const welcome = res.items[0].fields.welcomeMessage; 
-          setWelcomeText(welcome);
+          const entry = res.items[0].fields;
+          setWelcomeText(entry.welcomeMessage);
+
+          if (entry.siteBanner && entry.siteBanner.fields.file) {
+            setHeaderImage(entry.siteBanner.fields.file.url);
+          }
         }
       })
       .catch((error) => console.error("Error fetching entries:", error));
   }, []);
-  
-  
 
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60">We are Travel and Logistics Company</h1>
-          <HeaderP className="font13 semiBold">
-            {welcomeText}
-          </HeaderP>
+          <h1 className="extraBold font60">
+            ASDAN TRAVEL & LOGISTICS 
+          </h1>
+          <HeaderP className="font13 semiBold">{welcomeText}</HeaderP>
         </div>
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} />
+          <ImageContainer>
+            {" "}
+            <Img
+              className="radius8"
+              src={headerImage}
+              alt="Travel and logistics banner"
+              style={{
+                zIndex: 9,
+              }}
+            />{" "}
+          </ImageContainer>
+
           <QuoteWrapper className="flexCenter darkBg radius8">
             <QuotesWrapper>
               <QuotesIcon />
@@ -44,7 +57,12 @@ export default function Header() {
               <p className="font15 whiteColor">
                 <em>Your Path to Adventure, Our Way to Deliver.</em>
               </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Daniel Asante</p>
+              <p
+                className="font13 orangeColor textRight"
+                style={{ marginTop: "10px" }}
+              >
+                Daniel Asante
+              </p>
             </div>
           </QuoteWrapper>
           <DotsWrapper>
@@ -56,7 +74,6 @@ export default function Header() {
     </Wrapper>
   );
 }
-
 
 const Wrapper = styled.section`
   padding-top: 80px;
@@ -162,5 +179,8 @@ const DotsWrapper = styled.div`
     display: none;
   }
 `;
-
-
+const ImageContainer = styled.div`
+  width: 100%;
+  max-width: 380px;
+  height:100%
+`;

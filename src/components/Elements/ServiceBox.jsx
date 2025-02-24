@@ -12,8 +12,8 @@ export default function ServiceBox({icon, title, subtitle}) {
   let getIcon;
 
   switch (icon) {
-    case "roller":
-      getIcon = <RollerIcon />;
+    case "plane":
+      getIcon = <PlaneIcon />;
       break;
     case "monitor":
       getIcon = <MonitorIcon />;

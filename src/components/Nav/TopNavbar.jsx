@@ -87,42 +87,6 @@ export default function TopNavbar() {
               <Link
                 activeClass="active"
                 style={{ padding: "10px 15px" }}
-                to="projects"
-                spy={true}
-                smooth={true}
-                offset={-80}
-              >
-                Projects
-              </Link>
-            </li>
-            {/* <li className="semiBold font15 pointer">
-              <Link
-                activeClass="active"
-                style={{ padding: "10px 15px" }}
-                to="blog"
-                spy={true}
-                smooth={true}
-                offset={-80}
-              >
-                Blog
-              </Link>
-            </li> */}
-            {/* <li className="semiBold font15 pointer">
-              <Link
-                activeClass="active"
-                style={{ padding: "10px 15px" }}
-                to="pricing"
-                spy={true}
-                smooth={true}
-                offset={-80}
-              >
-                Pricing
-              </Link>
-            </li> */}
-            <li className="semiBold font15 pointer">
-              <Link
-                activeClass="active"
-                style={{ padding: "10px 15px" }}
                 to="contact"
                 spy={true}
                 smooth={true}
@@ -132,17 +96,6 @@ export default function TopNavbar() {
               </Link>
             </li>
           </UlWrapper>
-          {/* <UlWrapperRight className="flexNullCenter">
-            <li className="semiBold font15 pointer flexCenter">
-              <a
-                href="/"
-                className="radius8 lightBg"
-                style={{ padding: "10px 15px" }}
-              >
-                Get a Quote
-              </a>
-            </li>
-          </UlWrapperRight> */}
         </NavInner>
       </Wrapper>
     </>

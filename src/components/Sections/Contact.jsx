@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 // Assets
-import ContactImg1 from "../../assets/img/contact-1.png";
-import ContactImg2 from "../../assets/img/contact-2.png";
-import ContactImg3 from "../../assets/img/contact-3.png";
 
 export default function Contact() {
   return (
@@ -11,26 +8,9 @@ export default function Contact() {
       <div className="lightBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Things We Do In Travel Aspects</h1>
+            <h1 className="font40 extraBold">ttl</h1>
             <p className="font13">
-              We do Travel and tour,Hotel reservations, ticketing, car
-              rentals,travel insurance, travel documents. We also help with visa
-              appointments,visa appeals, birth certificate, passport, B.E.C.E
-              and W.A.S.S.C.E results checking, University and Nursing forms are
-              also available. We also do one on one Business consultations. We
-              also help people to get admission outside Ghana like Canada,
-              Europe etc..... We also help people to get scholarship outside
-              Ghana and with your visa, we do it from start to finish 100%
-              assured. If you have relatives outside Ghana and you want to join
-              them there,look no further, enter into our office and everything
-              is sorted out for your good. We assist everyone who wants
-              documents to work abroad. We help everyone who is already in
-              abroad but wants to relocate to another country like from Canada
-              to Germany, or Netherland to Europe to get any form of jobs,we
-              give a helping hand. Travel rick management: that is providing
-              safety and security guidance, emergency response and crisis
-              management. Group Travel management: That is coordinating
-              logistics for conference meetings and group events.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae animi adipisci esse itaque a repudiandae, obcaecati vitae distinctio quae veniam exercitationem fugit dolor, ullam amet doloribus laboriosam, quod sit cupiditate?
             </p>
           </HeaderInfo>
           <div className="row" style={{ paddingBottom: "30px" }}>
@@ -74,24 +54,6 @@ export default function Contact() {
                   style={{ maxWidth: "220px" }}
                 />
               </SumbitWrapper>
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">
-              <div
-                style={{ width: "50%" }}
-                className="flexNullCenter flexColumn"
-              >
-                <ContactImgBox>
-                  <img src={ContactImg1} alt="office" className="radius6" />
-                </ContactImgBox>
-                <ContactImgBox>
-                  <img src={ContactImg2} alt="office" className="radius6" />
-                </ContactImgBox>
-              </div>
-              <div style={{ width: "50%" }}>
-                <div style={{ marginTop: "100px" }}>
-                  <img src={ContactImg3} alt="office" className="radius6" />
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -144,11 +106,6 @@ const ButtonInput = styled.input`
   @media (max-width: 991px) {
     margin: 0 auto;
   }
-`;
-const ContactImgBox = styled.div`
-  max-width: 180px;
-  align-self: flex-end;
-  margin: 10px 30px 10px 0;
 `;
 const SumbitWrapper = styled.div`
   @media (max-width: 991px) {
